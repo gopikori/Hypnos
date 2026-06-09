@@ -11,9 +11,13 @@ endlessly outward. Background, spiral, and hand colors are all user-configurable
 
 ## Preview
 
-<img src="media/spiral-rotating.gif" width="320" alt="Hypnos spiral rotating clockwise, expanding outward (fēnix 8 Pro)">
+<a href="https://youtu.be/lZwY6ET82C4" title="Watch the Hypnos demo on YouTube">
+  <img src="media/spiral-rotating.gif" width="320" alt="Hypnos spiral rotating clockwise — click to watch the demo on YouTube">
+</a>
 
 *The spiral spins clockwise while the rings appear to expand outward (fēnix 8 Pro, simulator).*
+
+**▶ [Watch the full demo on YouTube](https://youtu.be/lZwY6ET82C4)**
 
 The spiral color is configurable — a few of the built-in options:
 
