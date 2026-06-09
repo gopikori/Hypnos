@@ -7,7 +7,7 @@ using Toybox.Time.Gregorian;
 using Toybox.Application;
 using Toybox.Math;
 
-class SpiralView extends WatchUi.WatchFace {
+class HypnosView extends WatchUi.WatchFace {
 
     // ---- geometry / animation tuning ----
     private const TURNS  = 8;     // number of spiral revolutions across the radius

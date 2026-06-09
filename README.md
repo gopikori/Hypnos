@@ -1,8 +1,8 @@
-# Spiral
+# Hypnos
 
-An animated analog watch face for Garmin Connect IQ. A blue/red spiral rotates
+A hypnotic animated analog watch face for Garmin Connect IQ. A spiral rotates
 slowly behind white hour & minute hands, giving the illusion of rings expanding
-outward. Background, spiral, and hand colors are all user-configurable.
+endlessly outward. Background, spiral, and hand colors are all user-configurable.
 
 - **Spiral** — power-law spiral (`r = R·u²`), spin clockwise, outer tail tapers to a point
 - **Hands** — tapered hour/minute polygons + center hub (optional second hand)
@@ -11,9 +11,9 @@ outward. Background, spiral, and hand colors are all user-configurable.
 
 ## Preview
 
-<img src="media/spiral-rotating.gif" width="320" alt="Spiral rotating clockwise, expanding outward (fēnix 8 Pro)">
+<img src="media/spiral-rotating.gif" width="320" alt="Hypnos spiral rotating clockwise, expanding outward (fēnix 8 Pro)">
 
-*Spiral spins clockwise while the rings appear to expand outward (fēnix 8 Pro, simulator).*
+*The spiral spins clockwise while the rings appear to expand outward (fēnix 8 Pro, simulator).*
 
 The spiral color is configurable — a few of the built-in options:
 
@@ -23,7 +23,7 @@ The spiral color is configurable — a few of the built-in options:
 
 ## Supported devices
 
-Spiral targets **round** Garmin watches on **CIQ 5.2 / 6.0** (AMOLED) and
+Hypnos targets **round** Garmin watches on **CIQ 5.2 / 6.0** (AMOLED) and
 **CIQ 5.2** (MIP). All listed variants share the same render path and are
 enabled in `manifest.xml`.
 
@@ -80,11 +80,11 @@ SDK=~/Library/Application\ Support/Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-9.1.0
 
 # build (pick any supported device id)
 "$SDK/bin/monkeyc" -d fenix8pro47mm -f monkey.jungle \
-    -o bin/Spiral.prg -y keys/developer_key.der -w
+    -o bin/Hypnos.prg -y keys/developer_key.der -w
 
 # run in the simulator
 "$SDK/bin/connectiq" &
-"$SDK/bin/monkeydo" bin/Spiral.prg fenix8pro47mm
+"$SDK/bin/monkeydo" bin/Hypnos.prg fenix8pro47mm
 ```
 
 ## Notes
@@ -94,5 +94,5 @@ SDK=~/Library/Application\ Support/Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-9.1.0
   fallback before wide MIP release; validate on ≥1 physical MIP unit.
 - **Always-on (AOD):** animation pauses; only thin hands are drawn to keep lit
   pixels low on AMOLED.
-- Adding a color is one line in `colorFor()` (`source/SpiralView.mc`) plus one
+- Adding a color is one line in `colorFor()` (`source/HypnosView.mc`) plus one
   `<listEntry>` per picker in `resources/settings.xml`.

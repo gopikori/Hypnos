@@ -1,15 +1,15 @@
 using Toybox.Application;
 using Toybox.WatchUi;
 
-class SpiralApp extends Application.AppBase {
-    private var _view as SpiralView or Null;
+class HypnosApp extends Application.AppBase {
+    private var _view as HypnosView or Null;
 
     function initialize() { AppBase.initialize(); }
     function onStart(state) {}
     function onStop(state) {}
 
     function getInitialView() {
-        _view = new SpiralView();
+        _view = new HypnosView();
         return [ _view ];
     }
 
