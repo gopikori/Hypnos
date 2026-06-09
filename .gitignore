@@ -1,0 +1,17 @@
+# build artifacts
+bin/*
+!bin/.gitkeep
+
+# signing keys - local only, never commit
+keys/
+
+# scratch / regenerable captures
+refs/
+
+# macOS
+.DS_Store
+
+# editor
+.vscode/
+.idea/
+*.swp

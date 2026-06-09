@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<properties>
+    <property id="SpiralColor" type="number">0</property>
+    <property id="HandColor"   type="number">7</property>
+    <property id="BgColor"     type="number">8</property>
+    <property id="RotateSpeed" type="number">0</property>
+    <property id="ShowSecond"  type="boolean">false</property>
+</properties>

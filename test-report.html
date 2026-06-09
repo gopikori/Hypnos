@@ -1,0 +1,157 @@
+<!doctype html><html lang=en><head><meta charset=utf-8>
+<meta name=viewport content='width=device-width,initial-scale=1'>
+<title>Spiral Watch Face — Tier-1 Compatibility Test Report</title>
+<style>
+:root{--bg:#0d1117;--card:#161b22;--bd:#30363d;--tx:#e6edf3;--dim:#8b949e;--ok:#2ea043;--bad:#f85149;--ac:#1f6feb}
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--tx)}
+.wrap{max-width:1100px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:24px;margin:0 0 4px} h2{font-size:18px;margin:34px 0 12px;border-bottom:1px solid var(--bd);padding-bottom:6px}
+.sub{color:var(--dim);margin:0 0 20px}
+.summary{display:flex;gap:14px;flex-wrap:wrap;margin:18px 0}
+.kpi{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:14px 20px;min-width:120px}
+.kpi .n{font-size:28px;font-weight:700} .kpi .l{color:var(--dim);font-size:13px}
+.kpi.ok .n{color:var(--ok)} .kpi.bad .n{color:var(--bad)}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--bd);border-radius:10px;overflow:hidden}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--bd);font-size:13px;vertical-align:top}
+th{background:#1c2230;color:var(--dim);font-weight:600}
+code{color:var(--ac);font-size:12px} .dim{color:var(--dim);font-size:12px}
+.st{font-weight:700;text-align:center} .st.pass{color:var(--ok)} .st.fail{color:var(--bad)}
+tr.fail td{background:rgba(248,81,73,.06)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px}
+.card.fail{border-color:#5c2b2b}
+.chead{display:flex;justify-content:space-between;align-items:center}
+.cname{font-weight:700;font-size:15px}
+.badge{font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px}
+.badge.pass{background:rgba(46,160,67,.15);color:var(--ok)} .badge.fail{background:rgba(248,81,73,.15);color:var(--bad)}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.meta span{background:#1c2230;border:1px solid var(--bd);border-radius:6px;padding:2px 8px;font-size:11px;color:var(--dim)}
+.note{color:var(--dim);font-size:12px;margin-bottom:8px}
+.warn{background:rgba(248,81,73,.1);border:1px solid #5c2b2b;color:#ffb4ae;border-radius:8px;padding:8px 10px;font-size:12px;margin-bottom:10px}
+.frames{display:flex;gap:8px}
+figure{margin:0;flex:1;text-align:center}
+img{width:100%;border-radius:8px;border:1px solid var(--bd);background:#000}
+figcaption{color:var(--dim);font-size:11px;margin-top:4px}
+.anim{margin-top:8px;font-size:12px;color:var(--dim)}
+.rec{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:16px 20px}
+.rec li{margin:6px 0} .tag{color:var(--ac)}
+footer{color:var(--dim);font-size:12px;margin-top:30px;text-align:center}
+</style></head><body><div class=wrap>
+<h1>Spiral Watch Face — Tier-1 Compatibility Test Report</h1>
+<p class=sub>Animated analog spiral face · Connect IQ · Generated 2026-06-08 · SDK 9.1.0 · CIQ Simulator</p>
+
+<div class=summary>
+ <div class='kpi'><div class=n>8</div><div class=l>Archetypes tested</div></div>
+ <div class='kpi ok'><div class=n>7</div><div class=l>Passed</div></div>
+ <div class='kpi bad'><div class=n>1</div><div class=l>Failed</div></div>
+ <div class='kpi'><div class=n>8/8</div><div class=l>Compiled clean</div></div>
+</div>
+
+<p class=sub>Each device was built for its own target, sideloaded into the simulator, and captured as two frames 1.3&nbsp;s apart. A large pixel delta between frames proves the spiral is live-rotating; a near-zero delta means it isn't rendering/animating.</p>
+
+<h2>Results summary</h2>
+<table><thead><tr><th>Device</th><th>Resolution</th><th>Display</th><th>CIQ</th><th>Build</th><th>Animation</th><th>Status</th></tr></thead>
+<tbody><tr class='pass'><td><b>fēnix 8 Pro 47mm</b><br><code>fenix8pro47mm</code></td><td>454×454</td><td>AMOLED</td><td>6.0</td><td>✓ clean</td><td>✓ animating<br><span class=dim>85,937 px Δ</span></td><td class='st pass'>PASS</td></tr><tr class='pass'><td><b>Venu 3S</b><br><code>venu3s</code></td><td>390×390</td><td>AMOLED</td><td>5.2</td><td>✓ 1 warn (icon scaling)</td><td>✓ animating<br><span class=dim>68,672 px Δ</span></td><td class='st pass'>PASS</td></tr><tr class='pass'><td><b>Forerunner 265</b><br><code>fr265</code></td><td>416×416</td><td>AMOLED</td><td>5.2</td><td>✓ 1 warn (icon scaling)</td><td>✓ animating<br><span class=dim>75,654 px Δ</span></td><td class='st pass'>PASS</td></tr><tr class='pass'><td><b>Forerunner 265S</b><br><code>fr265s</code></td><td>360×360</td><td>AMOLED</td><td>5.2</td><td>✓ 1 warn (icon scaling)</td><td>✓ animating<br><span class=dim>58,371 px Δ</span></td><td class='st pass'>PASS</td></tr><tr class='pass'><td><b>Forerunner 955 Solar</b><br><code>fr955</code></td><td>260×260</td><td>MIP 64-color</td><td>5.2</td><td>✓ 1 warn (icon scaling)</td><td>✓ animating<br><span class=dim>30,984 px Δ</span></td><td class='st pass'>PASS</td></tr><tr class='pass'><td><b>fēnix 7S</b><br><code>fenix7s</code></td><td>240×240</td><td>MIP 64-color</td><td>5.2</td><td>✓ 1 warn (icon scaling)</td><td>✓ animating<br><span class=dim>26,170 px Δ</span></td><td class='st pass'>PASS</td></tr><tr class='pass'><td><b>fēnix 7X</b><br><code>fenix7x</code></td><td>280×280</td><td>MIP 64-color</td><td>5.2</td><td>✓ 1 warn (icon scaling)</td><td>✓ animating<br><span class=dim>36,507 px Δ</span></td><td class='st pass'>PASS</td></tr><tr class='fail'><td><b>Instinct 2</b><br><code>instinct2</code></td><td>176×176</td><td>MIP 2-color</td><td>3.x</td><td>✓ 1 warn (icon scaling)</td><td>✗ static<br><span class=dim>26 px Δ (no spiral)</span></td><td class='st fail'>FAIL</td></tr></tbody></table>
+
+<h2>Per-device evidence</h2>
+<div class=grid>
+    <div class='card pass'>
+      <div class='chead'><span class='cname'>fēnix 8 Pro 47mm</span><span class='badge pass'>PASS</span></div>
+      <div class='meta'><span>454×454</span><span>AMOLED</span><span>CIQ 6.0</span></div>
+      <div class='note'>Flagship AMOLED round — primary target</div>
+      
+      <div class='frames'>
+        <figure><img src='screenshots/fenix8pro47mm_a.png' loading='lazy'><figcaption>Frame 1</figcaption></figure>
+        <figure><img src='screenshots/fenix8pro47mm_b.png' loading='lazy'><figcaption>Frame 2 (+1.3s)</figcaption></figure>
+      </div>
+      <div class='anim'>Animation: 85,937 px Δ</div>
+    </div>
+    <div class='card pass'>
+      <div class='chead'><span class='cname'>Venu 3S</span><span class='badge pass'>PASS</span></div>
+      <div class='meta'><span>390×390</span><span>AMOLED</span><span>CIQ 5.2</span></div>
+      <div class='note'>AMOLED round — small wellness</div>
+      
+      <div class='frames'>
+        <figure><img src='screenshots/venu3s_a.png' loading='lazy'><figcaption>Frame 1</figcaption></figure>
+        <figure><img src='screenshots/venu3s_b.png' loading='lazy'><figcaption>Frame 2 (+1.3s)</figcaption></figure>
+      </div>
+      <div class='anim'>Animation: 68,672 px Δ</div>
+    </div>
+    <div class='card pass'>
+      <div class='chead'><span class='cname'>Forerunner 265</span><span class='badge pass'>PASS</span></div>
+      <div class='meta'><span>416×416</span><span>AMOLED</span><span>CIQ 5.2</span></div>
+      <div class='note'>AMOLED round — mid running</div>
+      
+      <div class='frames'>
+        <figure><img src='screenshots/fr265_a.png' loading='lazy'><figcaption>Frame 1</figcaption></figure>
+        <figure><img src='screenshots/fr265_b.png' loading='lazy'><figcaption>Frame 2 (+1.3s)</figcaption></figure>
+      </div>
+      <div class='anim'>Animation: 75,654 px Δ</div>
+    </div>
+    <div class='card pass'>
+      <div class='chead'><span class='cname'>Forerunner 265S</span><span class='badge pass'>PASS</span></div>
+      <div class='meta'><span>360×360</span><span>AMOLED</span><span>CIQ 5.2</span></div>
+      <div class='note'>AMOLED round — smallest AMOLED</div>
+      
+      <div class='frames'>
+        <figure><img src='screenshots/fr265s_a.png' loading='lazy'><figcaption>Frame 1</figcaption></figure>
+        <figure><img src='screenshots/fr265s_b.png' loading='lazy'><figcaption>Frame 2 (+1.3s)</figcaption></figure>
+      </div>
+      <div class='anim'>Animation: 58,371 px Δ</div>
+    </div>
+    <div class='card pass'>
+      <div class='chead'><span class='cname'>Forerunner 955 Solar</span><span class='badge pass'>PASS</span></div>
+      <div class='meta'><span>260×260</span><span>MIP 64-color</span><span>CIQ 5.2</span></div>
+      <div class='note'>MIP round — animation-on-MIP check</div>
+      
+      <div class='frames'>
+        <figure><img src='screenshots/fr955_a.png' loading='lazy'><figcaption>Frame 1</figcaption></figure>
+        <figure><img src='screenshots/fr955_b.png' loading='lazy'><figcaption>Frame 2 (+1.3s)</figcaption></figure>
+      </div>
+      <div class='anim'>Animation: 30,984 px Δ</div>
+    </div>
+    <div class='card pass'>
+      <div class='chead'><span class='cname'>fēnix 7S</span><span class='badge pass'>PASS</span></div>
+      <div class='meta'><span>240×240</span><span>MIP 64-color</span><span>CIQ 5.2</span></div>
+      <div class='note'>MIP round — smallest fēnix</div>
+      
+      <div class='frames'>
+        <figure><img src='screenshots/fenix7s_a.png' loading='lazy'><figcaption>Frame 1</figcaption></figure>
+        <figure><img src='screenshots/fenix7s_b.png' loading='lazy'><figcaption>Frame 2 (+1.3s)</figcaption></figure>
+      </div>
+      <div class='anim'>Animation: 26,170 px Δ</div>
+    </div>
+    <div class='card pass'>
+      <div class='chead'><span class='cname'>fēnix 7X</span><span class='badge pass'>PASS</span></div>
+      <div class='meta'><span>280×280</span><span>MIP 64-color</span><span>CIQ 5.2</span></div>
+      <div class='note'>MIP round — largest fēnix</div>
+      
+      <div class='frames'>
+        <figure><img src='screenshots/fenix7x_a.png' loading='lazy'><figcaption>Frame 1</figcaption></figure>
+        <figure><img src='screenshots/fenix7x_b.png' loading='lazy'><figcaption>Frame 2 (+1.3s)</figcaption></figure>
+      </div>
+      <div class='anim'>Animation: 36,507 px Δ</div>
+    </div>
+    <div class='card fail'>
+      <div class='chead'><span class='cname'>Instinct 2</span><span class='badge fail'>FAIL</span></div>
+      <div class='meta'><span>176×176</span><span>MIP 2-color</span><span>CIQ 3.x</span></div>
+      <div class='note'>Mono semi-octagon — limited palette</div>
+      <div class='warn'>⚠ Red spiral not rendered — Instinct's 2-color display maps red to background. Only the white hands are visible. Needs an Instinct-specific palette (white spiral) or device-class color override.</div>
+      <div class='frames'>
+        <figure><img src='screenshots/instinct2_a.png' loading='lazy'><figcaption>Frame 1</figcaption></figure>
+        <figure><img src='screenshots/instinct2_b.png' loading='lazy'><figcaption>Frame 2 (+1.3s)</figcaption></figure>
+      </div>
+      <div class='anim'>Animation: 26 px Δ (no spiral)</div>
+    </div></div>
+
+<h2>Findings &amp; recommendations</h2>
+<div class=rec><ul>
+<li><span class=tag>✓ 7 / 8 archetypes pass.</span> All AMOLED sizes (360 / 390 / 416 / 454) and all MIP round sizes (240 / 260 / 280) render the red spiral correctly, auto-scaled, with the spiral actively rotating clockwise and the white hands on top.</li>
+<li><span class=tag>✗ Instinct 2 fails.</span> The 2-color MIP display can't show red — it maps to the black background, so the spiral vanishes (only 26&nbsp;px changed between frames vs 26k–86k elsewhere). <b>Fix:</b> detect the Instinct/low-color device class and force a white (foreground-color) spiral, ideally a thinner single-width variant without the taper. The report's suggestion of a separate Instinct SKU also applies.</li>
+<li><span class=tag>⚠ MIP animation is a real-hardware caveat.</span> In the simulator the spiral animates on MIP (fr955 / fēnix 7S / 7X) just like AMOLED, but real MIP hardware throttles watch-face redraws. Recommend gating the animation loop to AMOLED and falling back to a static spiral on MIP before shipping to those devices. Physical-device validation still needed for ≥1 MIP unit.</li>
+<li><span class=tag>ℹ Build warnings.</span> All non-fenix8 builds emit a single cosmetic warning — the 65×65 launcher icon is scaled to each device's icon size. Harmless; supply per-device icons later if desired.</li>
+</ul></div>
+
+<footer>Spiral · Tier-1 test pass · screenshots stored in <code>screenshots/</code></footer>
+</div></body></html>

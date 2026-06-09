@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<settings>
+    <setting propertyKey="@Properties.SpiralColor" title="Spiral Color">
+        <settingConfig type="list">
+            <listEntry value="0">Red</listEntry>
+            <listEntry value="1">Blue</listEntry>
+            <listEntry value="2">Cyan</listEntry>
+            <listEntry value="3">Green</listEntry>
+            <listEntry value="4">Purple</listEntry>
+            <listEntry value="5">Orange</listEntry>
+            <listEntry value="6">Yellow</listEntry>
+            <listEntry value="7">White</listEntry>
+            <listEntry value="8">Black</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.HandColor" title="Hand Color">
+        <settingConfig type="list">
+            <listEntry value="0">Red</listEntry>
+            <listEntry value="1">Blue</listEntry>
+            <listEntry value="2">Cyan</listEntry>
+            <listEntry value="3">Green</listEntry>
+            <listEntry value="4">Purple</listEntry>
+            <listEntry value="5">Orange</listEntry>
+            <listEntry value="6">Yellow</listEntry>
+            <listEntry value="7">White</listEntry>
+            <listEntry value="8">Black</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.BgColor" title="Background Color">
+        <settingConfig type="list">
+            <listEntry value="0">Red</listEntry>
+            <listEntry value="1">Blue</listEntry>
+            <listEntry value="2">Cyan</listEntry>
+            <listEntry value="3">Green</listEntry>
+            <listEntry value="4">Purple</listEntry>
+            <listEntry value="5">Orange</listEntry>
+            <listEntry value="6">Yellow</listEntry>
+            <listEntry value="7">White</listEntry>
+            <listEntry value="8">Black</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.RotateSpeed" title="Rotation Speed">
+        <settingConfig type="list">
+            <listEntry value="0">Slow</listEntry>
+            <listEntry value="1">Medium</listEntry>
+            <listEntry value="2">Fast</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.ShowSecond" title="Show Second Hand">
+        <settingConfig type="boolean"/>
+    </setting>
+</settings>
