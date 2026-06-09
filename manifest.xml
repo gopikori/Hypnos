@@ -2,7 +2,7 @@
 <iq:manifest xmlns:iq="http://www.garmin.com/xml/connectiq" version="3">
     <iq:application
         entry="HypnosApp"
-        id="1af6ef26fadf4f3d9187df766767a5db"
+        id="0021b4fe12e64c04b6f088938cf50391"
         launcherIcon="@Drawables.LauncherIcon"
         minApiLevel="3.1.0"
         name="@Strings.AppName"
